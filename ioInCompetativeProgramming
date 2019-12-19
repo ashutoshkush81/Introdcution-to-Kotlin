@@ -1,0 +1,32 @@
+//https://codeforces.com/contest/1266/problem/A
+private fun readLn() = readLine()!! // string line
+private fun readInt() = readLn().toInt() // single int
+private fun readStrings() = readLn().split(" ") // list of strings
+private fun readInts() = readStrings().map { it.toInt() } // list of ints
+
+fun main(args: Array<String>){
+    var a :Int = readInt()
+    while(a>0){
+        var str : String = readLn()
+        var total : Int = 0
+        var even : Int = 0
+        var zero : Int = 0
+        for(i in str){
+            var d : Int = i.toInt()- '0'.toInt()
+            if(d==0){
+                zero++;
+            }
+            if(d%2==0){
+                even++;
+            }
+            total+=d
+        }
+//        print("total = $total , even = $even , zero = $zero ")
+        if((total%3==0) and (even>1) and (zero>=1)){
+            println("red")
+        }
+        else
+            println("cyan")
+        a--;
+    }
+}
