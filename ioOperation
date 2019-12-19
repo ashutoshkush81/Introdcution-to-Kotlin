@@ -1,0 +1,28 @@
+import java.util.Scanner
+fun main(){
+//    Output -> 1.println()  2.print()
+    print("You are a good man ")
+    println("Nice to meet you")
+    println("Thank u very much")
+//    Input ->1.readLine() 2.scanner class
+//        1.readLine() -> used to take stream of bytes (in form of string)
+    println("Enter the string : ")
+    var number1 = readLine()
+    var number2 = readLine()
+
+    println("You entered : $number1")
+    println("You entered : "+number2)
+    //For handing Null Exception we use readLine()!!
+//    2.scanner -> using scanner take input
+    var num = Scanner(System.`in`)
+    var intergerInput : Int = num.nextInt()
+    println("You have entered $intergerInput")
+    var intergerInput1 : Int = num.nextInt()
+    println("You have entered $intergerInput1")
+    println("Sum of two number is ${intergerInput1 + intergerInput}")
+
+//    Another way is type conversion
+    print("Enter your first number : ")
+    var number : Int = readLine()!!.toInt()
+    println(number + 23)
+}
